@@ -1,0 +1,21 @@
+{
+  "app": {
+    "hello": "Hello",
+    "logout": "Logout"
+  },
+  "dialog": {
+    "new-version": {
+      "title": "New version available!",
+      "message": "Load new version?",
+      "buttons": {
+        "confirm": "Yes",
+        "reject": "No"
+      }
+    }
+  },
+  "components": {
+    "login-required": {
+      "message": "You must log in to use the application"
+    }
+  }
+}

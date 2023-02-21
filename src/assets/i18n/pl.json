@@ -1,0 +1,21 @@
+{
+  "app": {
+    "hello": "Cześć",
+    "logout": "Wyloguj"
+  },
+  "dialog": {
+    "new-version": {
+      "title": "Dostępna jest nowa wersja aplikacji!",
+      "message": "Załadować nową wersję?",
+      "buttons": {
+        "confirm": "Tak",
+        "reject": "Nie"
+      }
+    }
+  },
+  "components": {
+    "login-required": {
+      "message": "Aby korzystać z aplikacji musisz się zalogować"
+    }
+  }
+}

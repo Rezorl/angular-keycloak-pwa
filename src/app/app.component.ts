@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {SecurityContextSupplier, UserContextSupplier} from './authorization';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-keycloak-pwa';
+  readonly $userName = this.userContextSupplier.username$()
+  readonly canLogout = this.securityContextSupplier.canLogout;
+  readonly isLoggedIn$ = this.securityContextSupplier.isLoggedIn();
+
+  constructor(private readonly userContextSupplier: UserContextSupplier,
+              private readonly securityContextSupplier: SecurityContextSupplier) {}
+
+  logout() {
+    this.securityContextSupplier.logout().then();
+  }
 }

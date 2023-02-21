@@ -1,0 +1,16 @@
+<div mat-dialog-title>
+  <span>{{data.title | translate}}</span>
+</div>
+
+<mat-dialog-content>
+  <span>{{data.message | translate}}</span>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-raised-button [mat-dialog-close]="false">
+    {{data.rejectButton | translate}}
+  </button>
+  <button mat-raised-button color="primary" [mat-dialog-close]="true">
+    {{data.confirmButton | translate}}
+  </button>
+</mat-dialog-actions>
